@@ -1,3 +1,17 @@
+# Server
+
+REST API for common model "Project"
+
+- id
+- name
+- createdBy
+
+# Client
+
+Simple display page for list of Projects
+
+---
+
 ## clients
 
 - angular
