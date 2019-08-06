@@ -1,0 +1,20 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./database.db",
+    "define": {
+      "timestamps": false
+    }
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": ":memory:"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "./database.db",
+    "define": {
+      "timestamps": false
+    }
+  }
+}
