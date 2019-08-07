@@ -29,4 +29,4 @@ The branching strategy for this project will be Feature Branches. Each new featu
 - Dev: is the aggregate of features
 - (feature branch): is the branch of a single feature
 
-![Branch Strategy](https://drive.google.com/file/d/1JNbeN6Rora8VxCRJg9J6REEnUaicIFuB/view)
+![Branch Strategy](Github_Workflow.png)
