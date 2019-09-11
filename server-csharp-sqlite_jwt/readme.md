@@ -14,4 +14,5 @@ https://medium.com/@ozgurgul/asp-net-core-2-0-webapi-jwt-authentication-with-ide
 ## commands
 
 dotnet ef migrations add IdentityMigration --context ApplicationDbContext
+
 dotnet ef database update --context ApplicationDbContext
