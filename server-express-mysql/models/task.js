@@ -1,7 +1,7 @@
 "use strict";
 module.exports = (sequelize, DataTypes) => {
-  const Project = sequelize.define(
-    "Project",
+  const Task = sequelize.define(
+    "Task",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -9,12 +9,12 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement: true
       },
       name: DataTypes.STRING,
-      createdBy: DataTypes.STRING
+      complete: DataTypes.BOOLEAN
     },
     {}
   );
-  Project.associate = function(models) {
+  Task.associate = function(models) {
     // associations can be defined here
   };
-  return Project;
+  return Task;
 };

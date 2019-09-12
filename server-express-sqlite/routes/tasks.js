@@ -4,34 +4,34 @@ const sqlite = require("sqlite3").verbose();
 var models = require("../models");
 
 router.get("/", function(req, res, next) {
-  models.Project.findAll().then(projects => res.json(projects));
+  models.Task.findAll().then(tasks => res.json(tasks));
 });
 
 router.post("/", function(req, res, next) {
-  let newProject = new models.Project();
-  newProject.name = req.body.name;
-  newProject.createdBy = req.body.createdBy;
-  newProject.save().then(project => res.json(project));
+  let newTask = new models.Task();
+  newTask.name = req.body.name;
+  newTask.complete = req.body.complete;
+  newTask.save().then(task => res.json(task));
 });
 
 router.delete("/:id", function(req, res, next) {
-  let projectId = parseInt(req.params.id);
-  models.Project.findByPk(projectId)
-    .then(project => project.destroy())
-    .then(() => res.send({ projectId }))
+  let taskId = parseInt(req.params.id);
+  models.Task.findByPk(taskId)
+    .then(task => task.destroy())
+    .then(() => res.send({ taskId }))
     .catch(err => res.status(400).send(err));
 });
 
 router.put("/:id", function(req, res, next) {
-  models.Project.update(
+  models.Task.update(
     {
       name: req.body.name,
-      createdBy: req.body.createdBy
+      complete: req.body.complete
     },
     {
       where: { id: parseInt(req.params.id) }
     }
-  ).then(result => res.json(result));
+  ).then(task => res.json(task));
 });
 
 module.exports = router;
