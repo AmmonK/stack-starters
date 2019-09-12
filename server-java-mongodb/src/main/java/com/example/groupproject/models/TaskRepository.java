@@ -2,6 +2,6 @@ package com.example.groupproject.models;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface ProjectRepository extends MongoRepository<Project, String> {
+public interface TaskRepository extends MongoRepository<Task, String> {
 
 }

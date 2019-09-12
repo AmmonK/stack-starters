@@ -4,10 +4,10 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { ProjectDisplayComponent } from './project-display/project-display.component';
+import { TaskDisplayComponent } from "./task-display/task-display.component";
 
 @NgModule({
-  declarations: [AppComponent, ProjectDisplayComponent],
+  declarations: [AppComponent, TaskDisplayComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
