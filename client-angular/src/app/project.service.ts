@@ -7,7 +7,14 @@ import { Observable } from "rxjs";
   providedIn: "root"
 })
 export class ProjectService {
-  apiUrl: string = "http://localhost:5000/api/project";
+  // Java Spring Boot uses port 8080
+  //apiUrl: string = "http://localhost:8080/api/project";
+
+  // C# dotnetcore uses port 5000
+  //apiUrl: string = "http://localhost:5000/api/project";
+
+  // Express will use port 3000
+  apiUrl: string = "http://localhost:3000/api/project";
 
   constructor(private http: HttpClient) {}
 
