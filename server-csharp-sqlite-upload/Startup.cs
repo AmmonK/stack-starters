@@ -54,6 +54,7 @@ namespace server_csharp_sqlite
         app.UseHsts();
       }
       app.UseCors("CorsPolicy");
+      // ADDING THIS LINE IS VERY IMPORTANT, otherwise the images will not be viewable
       app.UseStaticFiles();
       app.UseMvc();
     }
